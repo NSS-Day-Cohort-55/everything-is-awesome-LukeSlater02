@@ -6,7 +6,7 @@ export const LegoDetail = (brick) => {
   let block = `<section style="background-color:#${brick.ColorHex}">
                 <div class="blockname">
                   ${link ? `<div><img src="./images/legoblock.png"></div>` : ""}
-                  <h3>Name: ${brick.LegoName}</h3>
+                  <h3>Name: ${brick.LegoName.toUpperCase()}</h3>
                 </div>
                 <div class="block-years">Manufactured ${1 + brick.YearTo - brick.YearFrom} years, ${brick.YearFrom} - ${brick.YearTo}</div>
               <em>Notes</em>: ${brick.Notes}</section>`;
