@@ -1,12 +1,13 @@
 console.log("hello beautiful");
 import { loadLegos, useLegos } from './legos/LegoData.js';
 import { makeLegoList } from './legos/LegoList.js';
+import {BuildersBio} from "./bio/BuildersBio.js"
 
 const navElement = document.querySelector("nav");
 
 navElement.addEventListener("click", (event) => {
-	if (event.target.id === "showBlue") {
-		filterLegos("Blue")
+	if (event.target.id === "showRed") {
+		filterLegos("Red")
 	} else if (event.target.id === "showAll") {
 		makeLegoList(useLegos());
 	}
