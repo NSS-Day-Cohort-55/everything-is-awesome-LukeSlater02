@@ -24,6 +24,47 @@ const filterLegos = (whatFilter) => {
 	makeLegoList(filterArray);
 }
 
+document
+.querySelector('#lego-dropdown')
+.addEventListener('change', (event) => {
+	if (event.target.value === "Solid") {
+		filterLegosByMaterial("Solid")
+	} 
+	else if (event.target.value === "Milky") {
+		filterLegosByMaterial("Milky");
+	} 
+	else if (event.target.value === "Chrome"){
+		filterLegosByMaterial("Chrome")
+	} 
+	else if (event.target.value === "Pearl"){
+		filterLegosByMaterial("Pearl")
+	} 
+	else if (event.target.value === "Transparent"){
+		filterLegosByMaterial("Transparent")
+	} 
+	else if (event.target.value === "Modulex"){
+		filterLegosByMaterial("Modulex")
+	} 
+	else if (event.target.value === "Ink"){
+		filterLegosByMaterial("Ink")
+	} 
+	else if (event.target.value === "Glitter"){
+		filterLegosByMaterial("Glitter")
+	} 
+	else{
+		makeLegoList(useLegos)
+	}
+})
+
+const filterLegosByMaterial = (event) => {
+	const filterArray = useLegos().filter(singleLego => {
+		if (singleLego.Material.includes(event)) {
+			return singleLego;
+		}
+	})
+	makeLegoList(filterArray);
+}
+
 //EIA - Everything Is Awesome
 const startEIA = () => {
 	loadLegos()
