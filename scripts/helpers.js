@@ -24,3 +24,16 @@ export const invertColor = (hex) => {
 	var zeros = new Array(len).join('0');
 	return (zeros + str).slice(-len);
   }
+
+  export const YearDisplay = (FirstYear, LastYear) => {
+    const YearNumber = LastYear - FirstYear
+    if (YearNumber > 0) {
+      return `Manufactured: ${YearNumber} years, ${FirstYear} - ${LastYear}`
+    }
+    else if (YearNumber < 0) {
+      return `Manufactured: ${FirstYear} - ${LastYear}`
+    }
+    else {
+      return " "
+    }
+  }
