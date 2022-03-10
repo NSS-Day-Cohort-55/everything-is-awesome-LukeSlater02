@@ -9,7 +9,7 @@ export const LegoDetail = (brick) => {
                   <h3>Name: ${brick.LegoName}</h3>
                 </div>
                 <div class="block-years">Manufactured ${1 + brick.YearTo - brick.YearFrom} years, ${brick.YearFrom} - ${brick.YearTo}</div>
-              </section>`;
+              <em>Notes</em>: ${brick.Notes}</section>`;
   
 
   if (link) {
